@@ -35,8 +35,8 @@ pipeline {
                 }
             }
     	}
-	   stage('Kubernetes Deployment of ASG Bugg Web Application') {
-            steps {
+	  stage('Kubernetes Deployment of ASG Bugg Web Application') {
+          steps {
                 withAWS(credentials: 'aws-credentials', region: 'us-east-1') {
 
       // Generate fresh kubeconfig that contains a valid IAM token
